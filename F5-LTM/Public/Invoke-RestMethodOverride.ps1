@@ -18,7 +18,7 @@ Function Invoke-RestMethodOverride {
         $Headers,
         $ContentType
     )
-    if ($PSVersionTable.PSVersion.Major -gt 5) {
+    if ($PSVersionTable.PSVersion.Major -ge 6) {
         Invoke-RestMethod @PSBoundParameters -SkipCertificateCheck
     }
     else {
